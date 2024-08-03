@@ -1,0 +1,103 @@
+
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 1vh; 
+}
+
+#reportList {
+  width: 45%;
+  height: auto;
+  margin-right: 1px; 
+  overflow-y: auto;
+}
+
+
+.main-layout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  margin-left: 5px; 
+  margin-bottom: 1px;
+  margin-top: 25px; 
+}
+
+#reportList {
+  width: 30%;
+  height: 460px;
+  overflow-y: auto;
+  background-image: linear-gradient(to left, #09032e, #07013b 50%, #1d1169 90%);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+}
+
+#reportList li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #041424;
+  background-color: #033333;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 4px;
+}
+
+#reportList li:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
+
+#reportList li span {
+  font-size: 15px;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+#relatorioForm {
+  width: 60%;
+  background-color: #040808;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#relatorioForm label {
+  display: block;
+  margin-top: 20px;
+  color: #000000;
+}
+
+#relatorioForm input[type="text"],
+#relatorioForm select {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 50px;
+  border: 1px solid #384f66;
+  background-color: #243b55;
+  color: #ffffff;
+}
+
+
+
+#saveReportButton, #clearReportsButton, #copyReportButton {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.hidden {
+  display: none;
+}
+
+

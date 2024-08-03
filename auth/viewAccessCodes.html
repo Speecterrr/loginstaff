@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ver Códigos de Acesso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="accessCodesContainer">
+        <h2>Códigos de Acesso</h2>
+        <ul id="accessCodesList"></ul>
+    </div>
+
+    <script>
+        fetch('/access-codes')
+            .then(response => response.json())
+            .then(data => {
+                const accessCodesList = document.getElementById('accessCodesList');
+                data.forEach(code => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = code.code;
+                    accessCodesList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Erro:', error));
+    </script>
+</body>
+</html>
