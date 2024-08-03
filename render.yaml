@@ -1,0 +1,15 @@
+# Exported from Render on 2024-08-03T13:03:58Z
+services:
+- type: web
+  name: loginstaff
+  runtime: node
+  repo: https://github.com/Speecterrr/loginstaff
+  plan: free
+  envVars:
+  - key: MONGODB_URI
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: node server.js
+  rootDir: STAFF/project-root/backend
+version: "1"
